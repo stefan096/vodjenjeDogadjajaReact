@@ -1,0 +1,69 @@
+UPUSTVO REACT
+
+PRIPREMA:
+- koriscen je visual studio code
+- pozicioniram se gde hocu da napravim projekat
+
+- komanda za pravljenje react projekta: 
+	npx create-react-app ime-aplikacije (ne sme camile case moze crtica)
+
+- da bi bilo moguce debugovanja i da se ne bi bunio za errore u package.json je neophodno dodati
+	 --no-cache na u scripts na start i test
+  "scripts": {
+    "start": "react-scripts start --no-cache",
+    "build": "react-scripts build",
+    "test": "react-scripts test --no-cache",
+    "eject": "react-scripts eject"
+  },
+
+-da bi nam se olaksalo pravljenje izgleda dodati boostrap komanda:
+	npm install --save bootstrap@4.1.3
+- takodje je potrebno importovati boostrap u index.js (na pocetak gde stoje importi) da bi radio komanda:
+	import 'bootstrap/dist/css/bootstrap.css'
+
+- da bi radilo rutiranje za web aplikacije je potrebno dodati komanda:
+	npm install --save react-router-dom
+	(postoji posebno za androind aplikacije rutiranje)
+
+- da bi napravili lep navigacioni bar potrebno je instalirati komanda:
+	npm install --save reactstrap
+
+POKRETANJE:
+- pokretanje aplikacije u debug modu komanda:
+	npm start
+-pokretanje aplikacije za production kao i builodanje fajlova komanda:
+	npm run-script build
+
+
+RAD:
+-browser router, najsigurnuije staviti u app.js
+	<BrowserRouter></BrowserRouter>
+	importovati import { BrowserRouter } from 'react-router-dom';
+				import { Route, Switch } from 'react-router-dom';
+-switch sluzi da match-uje samo prvu putanju a ne sve, route putanja na koju upucuje
+	 <Route path="/home" exact={true} component={imeKomponente}></Route>
+
+-pravljenje nove komponente
+	import React from 'react';
+	export default class Home extends React.Component {}
+	i izmedju viticastih pisemo sve, export da bi mogla da se koristi van te klase,
+	inace dobijamo error da ne postoji, potrebno je da ima render u kom returnujemo kako ce da izgleda
+	i pozelno da imamo kontruktor (prva linija koda super()), za inicijalizaciju i da bismo pamtili
+	stanje komponente.
+
+-pravljenje navigacionog bara
+	import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+	import { Link } from 'react-router-dom';
+
+-konstante se definisu u zasebnom .js fajlu i treba da izgledaju ovako:
+	export const PUTANJA = "http://localhost:8081";
+	gde se koriste smo ih uvesti i koristiti
+
+	
+
+
+
+
+
+
+
