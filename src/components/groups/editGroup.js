@@ -5,22 +5,22 @@ import NavBar from '../navBar';
 //import * as bs from 'reactstrap';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 
+const emptyGroup = {
+    name: '',
+    address: '',
+    city: '',
+    stateOrProvince: '',
+    country: '',
+    postalCode: ''
+  };
+
+
 class EditGroup extends React.Component{
-
-    emptyGroup = {
-        name: '',
-        address: '',
-        city: '',
-        stateOrProvince: '',
-        country: '',
-        postalCode: ''
-      };
-
-
+    
     constructor(props){
         super(props);
         this.state = {
-            group: this.emptyGroup
+            group: emptyGroup
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -120,7 +120,7 @@ class EditGroup extends React.Component{
                     </Form>
                 </Container>
             </div>
-        )
+        );
     }
 
 }

@@ -1,4 +1,4 @@
-UPUSTVO REACT
+UPUTSTVO REACT
 
 PRIPREMA:
 - koriscen je visual studio code
@@ -60,8 +60,21 @@ RAD:
 	gde se koriste smo ih uvesti i koristiti
 
 	
+GRESKE:
+- Fajlovi s komponentama se u reactu obicno nazivaju velikim slovom
+- fetch nece raditi na svim browserima, osim ako ne instaliras dodatni paket (ovo ti je informacija da znas za slucaj da te pitaju, ne moras sad da se bavis time)
+- Samo pazi na indentanciju
+- Svaki attibut u novi red idealno
+- I kada return elementa radis, U zagrade obicne stavljaj npr:
+ Return (
+ <tr ....
+)
+- U EditGroup komponenti taj defaultni (empty group) bolje definisi kao obicnu konstantu izvan komponente npr:
+	Const emptyGroup = {...} , I onda joj pristupas normalno, bez this
 
 
+UNAPREDNJENJA:
+-REDUX?
 
 
 
